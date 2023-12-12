@@ -1,0 +1,39 @@
+﻿<Window x:Class="GreenThumb.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GreenThumb"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background ="LightGreen">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Label Name="searchtext" Grid.Column="1" Grid.Row="2" Content="Search" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox Name="searchbox" Grid.Column="2" Grid.Row="2" VerticalAlignment="Top" Margin="0,21,30,0" Height="43" TextChanged="searchbox_TextChanged"/>
+            <ListView Name="Plantlist" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="5" Margin="0,39,0,39" SelectionChanged="Plantlist_SelectionChanged"/>
+            <Button Name="PlantWindowbutton" Grid.Column="5" Grid.Row="5" Content="Add Plant" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Click="btnAddPlantWindow_Click" Margin="0,45,0,0"/>
+            <Button Name="Detailsbtn" Grid.Column="4" Grid.Row="5" HorizontalAlignment="Center" FontSize="25" Content="PlantDetails" Click="btnDetails_Click" Margin="0,45,0,0" Height="34" VerticalAlignment="Top"/>
+            <Button Name="DeleteButton" Grid.Column="3" Grid.Row="5" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Content="Delete" Margin="0,25,0,0" Click="DeleteButton_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>
